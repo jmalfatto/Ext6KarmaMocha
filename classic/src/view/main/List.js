@@ -1,3 +1,5 @@
+/*global Ext*/
+
 /**
  * This view is an example list of people.
  */

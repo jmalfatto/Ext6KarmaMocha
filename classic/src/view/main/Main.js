@@ -1,3 +1,5 @@
+/*global Ext*/
+
 /**
  * This class is the main view for the application. It is specified in app.js as the
  * "mainView" property. That setting automatically applies the "viewport"

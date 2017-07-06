@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "karma start",
-    "lint": "./node_modules/.bin/eslint ./app; exit 0"
+    "lint": "./node_modules/.bin/eslint ./app ./classic; exit 0"
   },
   "author": "",
   "license": "ISC",
