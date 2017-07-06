@@ -4,12 +4,19 @@
   "description": "This folder is primarily a container for the top-level pieces of the application. While you can remove some files and folders that this application does not use, be sure to read below before deciding what can be deleted and what needs to be kept in source control.",
   "main": "app.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "lint": "./node_modules/.bin/eslint ./app; exit 0"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.0.2",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "karma": "^1.7.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",

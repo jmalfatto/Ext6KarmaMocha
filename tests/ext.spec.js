@@ -1,3 +1,6 @@
+/*global Ext Ext6KarmaMocha*/
+/*global describe it expect*/
+
 describe('setup', function () {
   it('tests for Ext framework', function () {
     expect(Ext).to.not.equal(null);
@@ -8,15 +11,15 @@ describe('setup', function () {
   });
 
   it('tests for MainModel instance and data', function () {
-    const model = Ext.create('Ext6KarmaMocha.view.main.MainModel');
-    const data = model.getData();
+    var model = Ext.create('Ext6KarmaMocha.view.main.MainModel');
+    var data = model.getData();
 
     expect(model).to.not.equal(null);
     expect(data).to.have.property('loremIpsum');
   });
 
   it('tests for Main view rendition', function () {
-    const view = Ext.create('Ext6KarmaMocha.view.main.Main', {
+    var view = Ext.create('Ext6KarmaMocha.view.main.Main', {
       renderTo: Ext.getBody()
     });
 

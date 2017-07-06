@@ -1,3 +1,5 @@
+/*global Ext*/
+
 /**
  * This class is the view model for the Main view of the application.
  */

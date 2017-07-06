@@ -1,3 +1,5 @@
+/*global Ext*/
+
 Ext.define('Ext6KarmaMocha.store.Personnel', {
     extend: 'Ext.data.Store',
 
