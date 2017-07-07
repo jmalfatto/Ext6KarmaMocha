@@ -1,8 +1,9 @@
-describe('dom', function () {
+describe('Main view', function () {
+  var main,
+      list,
+      results;
 
-  var main, list;
-
-  before(function() {
+  before(function () {
     main = Ext.create('Ext6KarmaMocha.view.main.Main', {
       renderTo: Ext.getBody()
     });
@@ -21,9 +22,14 @@ describe('dom', function () {
   it('tests for alert on list row select', function () {
     list.fireEvent('select');
 
-    const results = Ext.ComponentQuery.query('messagebox');
+    results = Ext.ComponentQuery.query('messagebox[title="Confirm"]');
 
     expect(results.length).to.equal(1);
     expect(results[0].hidden).to.equal(false);
+  });
+
+  after(function () {
+    main.destroy();
+    results[0].destroy();
   });
 });

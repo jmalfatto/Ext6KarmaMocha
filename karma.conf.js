@@ -17,17 +17,17 @@ module.exports = function(config) {
     files: [
       { pattern: 'ext/build/ext-all-rtl-debug.js', watched: false },
       { pattern: 'ext/classic/theme-neptune/overrides/**/*.js', watched: false },
-      'tests/testconfig.js',
+      'testconfig.js',
       'app/store/*.js',
       'app/view/**/*.js',
       'classic/src/**/*.js',
-      'tests/*.spec.js'
+      'app/**/*.spec.js',
+      'classic/src/*.spec.js'
     ],
 
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
