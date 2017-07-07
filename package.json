@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "test": "karma start",
-    "lint": "./node_modules/.bin/eslint ./app ./classic; exit 0"
+    "lint": "./node_modules/.bin/eslint ./app ./classic/src; exit 0"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.0.2",
     "eslint": "^4.1.1",
+    "eslint-config-airbnb-base": "^11.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.0",

@@ -1,5 +1,3 @@
-/*global Ext*/
-
 /**
  * This class is the controller for the main view for the application. It is specified as
  * the "controller" of the Main view class.
@@ -7,17 +5,17 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('Ext6KarmaMocha.view.main.MainController', {
-    extend: 'Ext.app.ViewController',
+  extend: 'Ext.app.ViewController',
 
-    alias: 'controller.main',
+  alias: 'controller.main',
 
-    onItemSelected: function () {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
+  onItemSelected: function () {
+    Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+  },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
+  onConfirm: function (choice) {
+    if (choice === 'yes') {
+      //
     }
+  }
 });
