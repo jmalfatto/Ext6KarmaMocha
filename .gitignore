@@ -8,4 +8,6 @@ classic.jsonp
 modern.json
 modern.jsonp
 resources/sass/.sass-cache/
+sass/example/example.css
 node_modules/
+!ext/build

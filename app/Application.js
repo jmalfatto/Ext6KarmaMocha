@@ -12,11 +12,11 @@ Ext.define('Ext6KarmaMocha.Application', {
     // TODO: add global / shared stores here
   ],
 
-  launch() {
+  launch: function() {
     // TODO - Launch the application
   },
 
-  onAppUpdate() {
+  onAppUpdate: function () {
     Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
       function (choice) {
         if (choice === 'yes') {
