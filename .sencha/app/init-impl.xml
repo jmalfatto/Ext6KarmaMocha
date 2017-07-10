@@ -12,7 +12,7 @@
 
         <!--
         This will traverse upwards in the file system, starting at the
-        app root directory, looking for the workspace.  Once found, 
+        app root directory, looking for the workspace.  Once found,
         ${workspace.dir}/local.properties will be imported into this
         project
         -->
@@ -53,8 +53,8 @@
         -->
         <x-sencha-init prefix=""/>
 
-        <!-- 
-        default the build environment to production if it is unset by this point 
+        <!--
+        default the build environment to production if it is unset by this point
         -->
         <property name="build.environment" value="production"/>
         <property name="CR" value="&#10;"/>
@@ -125,8 +125,8 @@
         -->
         <property name="internal.x-sencha-initialized" value="true"/>
 
-        <!-- 
-        this is a helper property that is the relative path prefix from the 
+        <!--
+        this is a helper property that is the relative path prefix from the
         application's root directory to the root of the build directory
         -->
         <x-get-relative-path from="${app.dir}"
@@ -155,7 +155,7 @@
              This property can be modified to change general build options
              such as excluding files from the set.  The format expects newlines
              for each argument, for example:
-             
+
              <property name="build.operations"/>
                    exclude
                        -namespace=Ext
@@ -166,11 +166,11 @@
         <!--
              This property can be modified to change concatenation
              specific options
-             
+
              -strip-comments: comment suppression
              -remove-text-references: transform string literal class references to objects
              -beautify: unpack the source
-             
+
              <property name="build.concat.options"/>
                     -strip-comments
                     -remove-text-references
@@ -181,9 +181,9 @@
 
         <!--
              This property can be modified to change page compilation options
-             
+
              -scripts: inject the given script path into the generated markup ahead of the all classes file
-             
+
              <property name="build.page.options"/>
                     -scripts=framework.js
              </property>
@@ -227,7 +227,7 @@
                 <property name="skip.slice" value="1"/>
             </then>
         </if>
-        
+
         <if>
             <!--If AppCache is FALSE or non-existent skip it-->
             <or>
@@ -361,7 +361,7 @@
                     -tag=${build.tag.name}
                 and
                 restore
-                    ${build.tag.name}     
+                    ${build.tag.name}
                 and
                 ${include.versions.file}
                 union
@@ -398,9 +398,9 @@
             ]]>
         </x-compile>
     </target>
-    
+
     <target name="-init-web-server" unless="skip.web.start">
-        <x-server port="${build.web.port}" 
+        <x-server port="${build.web.port}"
                   portPropertyName="build.web.port"
                   defaultSassFile="${app.out.scss}"
                   defaultCssFile="${app.out.css}"
@@ -414,5 +414,5 @@
         </x-server>
         <x-echo>Application available at http://localhost:${build.web.port}</x-echo>
     </target>
-    
+
 </project>

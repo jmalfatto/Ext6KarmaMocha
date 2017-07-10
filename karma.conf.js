@@ -21,8 +21,7 @@ module.exports = function(config) {
       'app/store/*.js',
       'app/view/**/*.js',
       'classic/src/**/*.js',
-      'app/**/*.spec.js',
-      'classic/src/*.spec.js'
+      'tests/**/*.spec.js'
     ],
 
 
@@ -36,8 +35,7 @@ module.exports = function(config) {
       'app/store/*.js': ['babel'],
       'app/view/**/*.js': ['babel'],
       'classic/src/**/*.js': ['babel'],
-      'app/**/*.spec.js': ['babel'],
-      'classic/src/*.spec.js': ['babel']
+      'tests/**/*.spec.js': ['babel'],
     },
 
     babelPreprocessor: {
