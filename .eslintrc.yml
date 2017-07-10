@@ -2,9 +2,12 @@ extends: airbnb-base
 
 env:
   browser: true
+  mocha: true
 
 globals:
   Ext: true
+  expect: true
+  Ext6KarmaMocha: true
 
 rules:
   comma-dangle: 0

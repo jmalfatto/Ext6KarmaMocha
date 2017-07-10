@@ -12,7 +12,7 @@ Ext.define('Ext6KarmaMocha.Application', {
     // TODO: add global / shared stores here
   ],
 
-  launch: function() {
+  launch: function () {
     // TODO - Launch the application
   },
 
