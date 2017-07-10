@@ -16,6 +16,7 @@ pipeline {
                 echo 'Testing..'
 
                 sh 'npm test'
+                sh 'npm run lint'
             }
         }
         stage('Deploy') {
