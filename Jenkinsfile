@@ -9,6 +9,7 @@ pipeline {
                 echo 'Building..'
 
                 sh 'npm install'
+                sh 'sencha app build'
             }
         }
         stage('Test') {
