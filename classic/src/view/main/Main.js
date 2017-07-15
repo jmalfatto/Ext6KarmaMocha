@@ -15,7 +15,8 @@ Ext.define('Ext6KarmaMocha.view.main.Main', {
 
     'Ext6KarmaMocha.view.main.MainController',
     'Ext6KarmaMocha.view.main.MainModel',
-    'Ext6KarmaMocha.view.main.List'
+    'Ext6KarmaMocha.view.main.List',
+    'APP.mixin.Badge' // this is to test the Ext.Loader in the context of Karma
   ],
 
   controller: 'main',

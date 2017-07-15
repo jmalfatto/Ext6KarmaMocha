@@ -4,9 +4,7 @@ describe('Main view', () => {
   let results;
 
   before(() => {
-    main = Ext.create('Ext6KarmaMocha.view.main.Main', {
-      renderTo: Ext.getBody()
-    });
+    main = Ext.create('Ext6KarmaMocha.view.main.Main');
   });
 
   it('tests for Main view rendition', () => {
