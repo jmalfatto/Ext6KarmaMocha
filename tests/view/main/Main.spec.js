@@ -1,6 +1,6 @@
 describe('Main view', () => {
   let main;
-  let list;
+  var list;
   let results;
 
   before(() => {

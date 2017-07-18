@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '../',
 
 
     // frameworks to use
@@ -15,15 +15,19 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: 'ext/build/ext-all-rtl-debug.js', watched: false },
-      { pattern: 'ext/classic/theme-neptune/overrides/**/*.js', watched: false },
-      'testconfig.js',
-      'app/store/*.js',
-      'app/view/**/*.js',
-      'classic/src/**/*.js',
-      '../karma-extjs/example/APP/src/**/*.js',
-      'tests/**/*.spec.js'
+      { pattern: 'Ext6KarmaMocha/ext/build/ext-all-rtl-debug.js', watched: false },
+      { pattern: 'Ext6KarmaMocha/ext/classic/theme-neptune/overrides/**/*.js', watched: false },
+      'Ext6KarmaMocha/testconfig.js',
+      'Ext6KarmaMocha/app/store/*.js',
+      'Ext6KarmaMocha/app/view/**/*.js',
+      'Ext6KarmaMocha/classic/src/**/*.js',
+      'karma-extjs/example/APP/src/**/*.js',
+      'Ext6KarmaMocha/tests/**/*.spec.js'
     ],
+
+    proxies: {
+      '/APP/': '/base/karma-extjs/example/APP/src/'
+    },
 
 
     // list of files to exclude
@@ -33,10 +37,10 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/store/*.js': ['babel'],
-      'app/view/**/*.js': ['babel'],
-      'classic/src/**/*.js': ['babel'],
-      'tests/**/*.spec.js': ['babel'],
+      'Ext6KarmaMocha/app/store/*.js': ['babel'],
+      'Ext6KarmaMocha/app/view/**/*.js': ['babel'],
+      'Ext6KarmaMocha/classic/src/**/*.js': ['babel'],
+      'Ext6KarmaMocha/tests/**/*.spec.js': ['babel'],
     },
 
     babelPreprocessor: {
@@ -70,12 +74,12 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
