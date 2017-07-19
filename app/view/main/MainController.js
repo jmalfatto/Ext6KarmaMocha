@@ -9,6 +9,17 @@ Ext.define('Ext6KarmaMocha.view.main.MainController', {
 
   alias: 'controller.main',
 
+  init: function (view) {
+    // to test sinon and scenario where api is unavailable during test run, fire xhr that ends in 404
+    Ext.Ajax.request({
+      url: 'http://google.com/404'
+    }).then((response) => {
+      var response = Ext.decode(response.responseText);
+
+      view.setTitle(response.title);
+    });
+  },
+
   onItemSelected: function () {
     Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
   },
